@@ -52,7 +52,7 @@ class App extends Component {
     onChangeSearch = (e) => {
         const { name, value } = e.target;
         let data = this.state.search;
-        data[name] = value;
+        data[name] = value.toLowerCase();
         this.setState((prevState) => ({ ...prevState, search: data }))
     }
 
