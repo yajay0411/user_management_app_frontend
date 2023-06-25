@@ -1,4 +1,5 @@
 .app {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,6 +22,11 @@
     display: flex;
     justify-content: center;
 }
+.top-div form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .logo {
@@ -31,7 +37,7 @@
 }
 
 .main-display {
-    padding: 50px;
+    /* padding: 50px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +93,7 @@
     margin: 5px;
 }
 
-.form-btn{
+.form-btn {
     font-weight: 800;
     border: none;
     border-radius: 5px;
@@ -104,6 +110,7 @@
 
 .btn-add {
     color: white;
+    max-width: 110px;
     background: linear-gradient(20deg, rgb(255, 140, 0) 0%, rgb(255, 78, 78) 55%, rgb(195, 0, 255) 100%);
 }
 
@@ -159,7 +166,7 @@ label {
 select {
     padding: 10px;
     border: none;
-    margin: 0 10px;
+    margin: 10px;
     outline: none;
     font-size: 1rem;
     border-radius: 5px;
@@ -187,4 +194,105 @@ select {
     top: 30vh;
     background-color: aliceblue;
     z-index: 2;
+}
+
+
+
+@media only screen and (max-width:550px) {
+
+    .top-display {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .top-div form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .card-display {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+}
+
+@media only screen and (min-width:551px) and (max-width:850px) {
+
+    .top-display {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .top-div form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .card-display {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (min-width:850px) and (max-width:1100px) {
+
+    .top-div form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .card-display {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
